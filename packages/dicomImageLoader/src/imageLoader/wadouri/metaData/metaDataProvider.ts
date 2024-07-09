@@ -121,6 +121,7 @@ function metaDataProvider(type, imageId) {
       imageOrientationPatient: extractOrientationFromDataset(dataSet),
       imagePositionPatient: extractPositionFromDataset(dataSet),
       sliceThickness: extractSliceThicknessFromDataset(dataSet),
+      spacingBetweenSlices: dataSet.floatString('x00180088'),
       pixelSpacing: extractSpacingFromDataset(dataSet),
       numberOfFrames: dataSet.uint16('x00280008'),
       isNMReconstructable:
@@ -175,6 +176,7 @@ function metaDataProvider(type, imageId) {
       columnCosines,
       imagePositionPatient,
       sliceThickness,
+      spacingBetweenSlices: dataSet.floatString('x00180088'),
       sliceLocation: dataSet.floatString('x00201041'),
       pixelSpacing,
       rowPixelSpacing,

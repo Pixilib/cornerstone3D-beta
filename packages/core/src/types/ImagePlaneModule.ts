@@ -11,6 +11,7 @@ export interface ImagePlaneModule {
   rowPixelSpacing?: number;
   sliceLocation?: number;
   sliceThickness?: number;
+  spacingBetweenSlices?: number;
   frameOfReferenceUID: string;
   columns: number;
   rows: number;
